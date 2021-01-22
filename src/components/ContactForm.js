@@ -16,6 +16,7 @@ const ContactForm = () => {
         <div>
           <label htmlFor="firstName">First Name*</label>
           <input
+            data-testid='firstName'
             name="firstName"
             placeholder="Edd"
             ref={register({ required: true, maxLength: 3 })}
@@ -28,6 +29,7 @@ const ContactForm = () => {
         <div>
           <label htmlFor="lastName">Last Name*</label>
           <input
+            data-testid="lastName"
             id="lastName"
             name="lastName"
             placeholder="Burke"
@@ -43,6 +45,7 @@ const ContactForm = () => {
             Email*
           </label>
           <input name="email" 
+            data-testid='email'
             id="lastName"
             placeholder="bluebill1049@hotmail.com"
             ref={register({ required: true })} 
@@ -54,6 +57,7 @@ const ContactForm = () => {
         <div>
           <label htmlFor="message">Message</label>
           <textarea
+            data-testid='message'
             name="message"
             id="message" 
             ref={register({ required: false })} 
@@ -64,7 +68,7 @@ const ContactForm = () => {
             {JSON.stringify(data, null, 2)}
           </pre>
         )}
-        <input type="submit" />
+        <input data-testid='submit' type="submit" />
       </form>
     </div>
   );
